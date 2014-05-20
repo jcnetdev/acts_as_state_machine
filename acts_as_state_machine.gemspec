@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.rdoc_options = ["--main", "README"]
   s.extra_rdoc_files = ["README"]
 
-  s.add_dependency 'activerecord', ['>= 2.1']
+  s.add_dependency 'activerecord', ['>= 3.1']
   
   s.files = ["CHANGELOG",
              "MIT-LICENSE",
@@ -22,9 +22,7 @@ Gem::Specification.new do |s|
              "Rakefile",
              "TODO",
              "acts_as_state_machine.gemspec",
-             "init.rb",
-             "lib/acts_as_state_machine.rb",
-             "rails/init.rb"]
+             "lib/acts_as_state_machine.rb"]
 
   s.test_files = ["test/fixtures",
                   "test/fixtures/conversations.yml",

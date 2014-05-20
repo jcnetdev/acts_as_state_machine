@@ -104,15 +104,15 @@ class ActsAsStateMachineTest < Test::Unit::TestCase
 
   def teardown
     Conversation.class_eval do
-      write_inheritable_attribute :states, {}
-      write_inheritable_attribute :initial_state, nil
-      write_inheritable_attribute :transition_table, {}
-      write_inheritable_attribute :event_table, {}
-      write_inheritable_attribute :state_column, "state"
+      self._states          = {}
+      self.finitial_state   = nil
+      self.transition_table = {}
+      self.event_table      = {}
+      self.state_column     = "state"
 
       # Clear out any callbacks that were set by acts_as_state_machine.
-      write_inheritable_attribute :before_create, []
-      write_inheritable_attribute :after_create, []
+      reset_callbacks :before_create
+      reset_callbacks :after_create
     end
   end
 
